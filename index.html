@@ -44,12 +44,12 @@
     <div class="skills-container">
         <div class="skill">
     <img src="html-5.png" alt="HTML">
-        <p>HTML5</p>
+        <p>HTML</p>
     </div>
 
     <div class="skill">
     <img src="css-3.png" alt="CSS">
-        <p>CSS3</p>
+        <p>CSS</p>
     </div>
 
     <div class="skill destacada">
@@ -91,11 +91,25 @@
     <h2>Intereses</h2>
     
 <div class="intereses-flex">
-    <span>Tecnología</span>
-    <span>Ciberseguridad</span>
-    <span>Aprendizaje continuo</span>
-    <span>Innovación</span>
+   <span class="interes-item" data-info="Interés en brindar apoyo a comunidades y personas en situación vulnerable mediante la enseñanza del uso de herramientas digitales y la transformación digital.">
+    Tecnología
+   </span>
+
+   <span class="interes-item" data-info="Interés en el análisis y monitoreo de sistemas, con el objetivo de adquirir experiencia en la identificación de riesgos y protección de la información.">
+   Ciberseguridad
+   </span>
+
+   <span class="interes-item" data-info="Me gusta aprender constantemente. Como internacionalista, busco especializarme en tendencias tecnológicas y desarrollar nuevas habilidades.">
+   Aprendizaje continuo
+   </span>
+
+   <span class="interes-item" data-info="Interés en conocer nuevas tendencias tecnológicas para fomentar la innovación y fortalecer el pensamiento crítico.">
+   Innovación
+   </span>
 </div>
+
+<p id="info-interes" class="info-interes"></p>
+
 </section>
 
 <section id="contacto">
@@ -111,9 +125,10 @@ Contáctame
     <p>&copy; 2026 Carolina Aguilar. Todos los derechos reservados.</p>
     <div class="footer links">
      <a href="mailto:correo@email.com">Email</a>
-     <a href="https://github.com/caroaggord" target="_blank">GitHub</a>
-    </div>
-    </div>
+     <a href="https://www.linkedin.com/in/carolinaaguilargordillo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/caroaggord" target="_blank">GitHub</a>
+</div>
+</div>
 
     <p class="creditos">
         <a href="https://www.flaticon.es/iconos-gratis/html-5">Html 5 iconos creados por Freepik - Flaticon</a> |
@@ -135,6 +150,14 @@ Contáctame
     toggle.addEventListener("click", () => {
         nav.classList.toggle("active");
     });
+    const items = document.querySelectorAll(".interes-item");
+    const info = document.getElementById("info-interes");
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            info.textContent = item.getAttribute("data-info");
+        });
+    });
+
 </script>
 
 </body>
