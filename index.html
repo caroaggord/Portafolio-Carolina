@@ -18,6 +18,7 @@
 </header>
 
 <nav class="navbar">
+    <button class="menu-toggle">☰</button>
     <div class="nav-container">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#habilidades">Habilidades</a>
@@ -72,14 +73,14 @@
     <div class="card">
         <h3>Portafolio Web</h3>
         <p>
-            Proyecto personal desarrollado con HTML y CSS para mostrar mi progreso como desarrolladora.
+            Proyecto desarrollado con HTML y CSS aplicando diseño responsivo.
         </p>
     </div>
 
     <div class="card">
-        <h3>Próximamente</h3>
+        <h3>Repositorio DevF</h3>
         <p>
-            Más proyectos serán añadidos conforme avance en mi formación.
+            Uso de Git y GitHub para control de versiones.
         </p>
     </div>
     </div>
@@ -99,14 +100,14 @@
 
 <section id="contacto">
     <h2>Contacto</h2>
-    <p>Si deseas ponerte en contacto conmigo puedes enviarme un mensaje.</p>
+    <p>Si deseas ponerte en contacto conmigo:</p>
     <a href="mailto:correo@email.com" class="btn">
 Contáctame
 </a>
 </section>
 
 <footer>
-    <div class="footer-container"
+    <div class="footer-container">
     <p>&copy; 2026 Carolina Aguilar. Todos los derechos reservados.</p>
     <div class="footer links">
      <a href="mailto:correo@email.com">Email</a>
@@ -126,6 +127,15 @@ Contáctame
 <a href="mailto:carolina.agord@gmail.com" class="contacto-flotante">
 ✉
 </a> 
+
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-container");
+
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+</script>
 
 </body>
 
